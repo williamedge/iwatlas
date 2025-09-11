@@ -14,12 +14,12 @@ from sfoda.utils.myproj import MyProjOld as MyProj
 
 try:
     import pyTMD
-except:
+except ImportError:
     print('pyTMD not found, nodal corrections will not work. Set nodal=False for predictions')
     
 try:
     import timescale
-except:
+except ImportError:
     print('timescale not found, nodal corrections will not work. Set nodal=False for predictions')
 
 from . import harmonics
